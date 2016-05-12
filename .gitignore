@@ -301,3 +301,7 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+Launcher/Launcher.vcxproj.filters
+*.vcxproj
+GTA2++/GTA2++.vcxproj.filters
+GTA2_plusplus.sln
