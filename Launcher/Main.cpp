@@ -22,7 +22,7 @@
 #include <sstream>
 #include <string>
 
-#include "../GTA2++/Shared/Version.h"
+#include "../GTA2++/Shared/Version.hpp"
 
 BOOL IsAdmin()
 {

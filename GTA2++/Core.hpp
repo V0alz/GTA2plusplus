@@ -19,6 +19,8 @@
 
 #include "Logger.hpp"
 #include "GTA2\Structures\PlayerInfo.hpp"
+#include "Raknet\WindowsIncludes.h"
+#include "Raknet\RakPeerInterface.h"
 
 class Core
 {
@@ -43,4 +45,7 @@ private:
 	PlayerInfo m_playerInfo;
 	DWORD* m_isGamePaused = (DWORD*)0x005DD310;
 	DWORD* m_isGameStarted = (DWORD*)0x005E2030;
+
+	RakNet::RakPeerInterface *m_peer = RakNet::RakPeerInterface::GetInstance();
+	RakNet::SocketDescriptor m_socket;
 };

@@ -16,14 +16,25 @@
 *	along with this program.If not, see <http://www.gnu.org/licenses/>.
 */
 #include "Core.hpp"
-#include <Windows.h>
+#include "Raknet\WindowsIncludes.h" 
 #include <sstream>
+
+#define MAX_CLIENTS 6
+#define SERVER_PORT 6669
 
 Core::Core()
 {
 	m_running = false;
 	Logger::Init();
 	Logger::Out( "Core::Core - Constructed." );
+
+	RakNet::StartupResult result;
+	result = m_peer->Startup( 1, &m_socket, 1 );
+	if( result == RakNet::StartupResult::RAKNET_STARTED )
+	{
+		Logger::Out( "Core::Core - RakNet Started." );
+	}
+	RakNet::RakPeerInterface::DestroyInstance( m_peer );
 }
 
 Core::~Core()

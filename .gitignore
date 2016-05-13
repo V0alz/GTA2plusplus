@@ -305,3 +305,5 @@ Launcher/Launcher.vcxproj.filters
 *.vcxproj
 GTA2++/GTA2++.vcxproj.filters
 GTA2_plusplus.sln
+
+Raknet/

@@ -18,7 +18,7 @@
 #include "Logger.hpp"
 #include <string>
 #include <sstream>
-#include "Shared/Version.h"
+#include "Shared/Version.hpp"
 
 std::ofstream Logger::m_logFile;
 

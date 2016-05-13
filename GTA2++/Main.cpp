@@ -15,7 +15,10 @@
 *	You should have received a copy of the GNU General Public License
 *	along with this program.If not, see <http://www.gnu.org/licenses/>.
 */
-#include <Windows.h>
+#define _WINSOCK_DEPRECATED_NO_WARNINGS
+#define _CRT_SECURE_NO_WARNINGS // this is only temp
+#include <WinSock2.h>
+#include "Raknet\WindowsIncludes.h"
 #include "Core.hpp"
 
 VOID WINAPI Main()
